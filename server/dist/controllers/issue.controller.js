@@ -49,11 +49,23 @@ exports.createIssueController = createIssueController;
 var getIssueController = function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         console.log('here');
-        return [2 /*return*/, res.status(200).json({
-                id: '1',
-                title: 'Add zod to improve robustness',
-                description: 'Add zod to this project to parse user data before trying to save it to the db.',
-            })];
+        return [2 /*return*/, res.status(200).json([
+                {
+                    id: '1',
+                    title: 'Add zod to improve robustness',
+                    description: 'Add zod to this project to parse user data before trying to save it to the db.',
+                },
+                {
+                    id: '2',
+                    title: 'Add zod to improve robustness',
+                    description: 'Add zod to this project to parse user data before trying to save it to the db.',
+                },
+                {
+                    id: '3',
+                    title: 'Add zod to improve robustness',
+                    description: 'Add zod to this project to parse user data before trying to save it to the db.',
+                },
+            ])];
     });
 }); };
 exports.getIssueController = getIssueController;
@@ -73,7 +85,7 @@ var deleteIssueController = function (req, res) { return __awaiter(void 0, void 
         if (!req.params.id)
             throw new Error('Id is required');
         console.log(req.params.id);
-        return [2 /*return*/, res.status(204).json({})];
+        return [2 /*return*/, res.status(200).json({ id: req.params.id })];
     });
 }); };
 exports.deleteIssueController = deleteIssueController;
